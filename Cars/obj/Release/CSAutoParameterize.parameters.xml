@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CarsEntities-Web.config Connection String" description="CarsEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Cars.mdf;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\foggy\\documents\\visual\ studio\ 2015\\Projects\\Cars\\Cars\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CarsEntities']/@connectionString" />
+  </parameter>
+  <parameter name="CarsEntities1-Web.config Connection String" description="CarsEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model2.csdl|res://*/Models.Model2.ssdl|res://*/Models.Model2.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Cars.mdf;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\foggy\\documents\\visual\ studio\ 2015\\Projects\\Cars\\Cars\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CarsEntities1']/@connectionString" />
+  </parameter>
+</parameters>

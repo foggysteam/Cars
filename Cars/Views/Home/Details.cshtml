@@ -1,0 +1,73 @@
+﻿@model Cars.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Model)</h4>
+    <hr />
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="@Html.DisplayFor(model => model.Picture)" />
+                </div>
+            </div>
+            <div class="col-md-7">
+                <dl class="dl-horizontal">
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Make) :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Make)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Model) :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Model)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Year) :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Year)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Engine) :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Engine)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Price) :
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Price)
+                    </dd>
+
+                </dl>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="create" style="margin-top:20px;">
+        <a><i class="fa fa-chevron-left" aria-hidden="true"></i>@Html.ActionLink("Back to List", "Index")</a>
+        <a><i class="fa fa-pencil-square-o"></i>@Html.ActionLink("Edit", "Edit", new { id = Model.Id })</a>
+    </div>
+</div>

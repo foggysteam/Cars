@@ -1,0 +1,106 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/Content/4.jpg);
+    color:#1a1b1c;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.item {
+  position: relative;
+  
+  border: 1px solid #333;
+  
+  overflow: hidden;
+  width: 500px;
+}
+.item img {
+  max-width: 100%;
+  
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+td {
+    width:300px;
+    text-align:center;
+    vertical-align:text-bottom !important;
+
+}
+th {
+    width:300px;
+    text-align:center;
+    vertical-align:auto;
+
+}
+h2{
+    color:#000;
+    text-shadow: 0px 1px 5px #555;
+}
+
+#top{
+    padding: 20px 20px;
+    /*background-color:rgba(118,54,38,0.9);*/
+    background-color:rgba(29,69,66,0.9);
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+}
+
+.fh5co-blog-style-1 .fh5co-post .fh5co-post-meta a {
+    font-size: 13px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color:#0e2447;
+    
+}
+.create a{
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color:#fefefe;
+    font-weight:bold;
+}
+.body-content{
+    background-color:rgba(102,165,173,0.9);
+    border-radius:5px;
+    padding: 20px 20px;
+}
+.fh5co-blog-style-1{
+    border-radius:5px;
+}
+.dl-horizontal dt {
+    padding: 10px 20px;
+}
+
+
+.dl-horizontal dd {
+    margin-left: 180px;
+    vertical-align: middle;
+    padding-top: 10px;
+}

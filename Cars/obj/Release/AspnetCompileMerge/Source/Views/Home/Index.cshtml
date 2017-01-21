@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Cars.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container" id="top">
+    <h2>Cars Database</h2>
+    @using (Html.BeginForm())
+    {
+        <p>
+            <div class="create col-md-9 form-inline">
+                <label>Make:</label>
+                @Html.DropDownList("carmake", (IEnumerable<SelectListItem>)ViewBag.Id, "All", new { @class = "form-control" })
+                |
+                <label>Model:</label> @Html.TextBox("SearchString", "", new { @class = "form-control" })
+                <input type="submit" value="Filter" class="btn btn-default" />
+            </div>
+            <div class="create col-md-3">
+                <a><i class="fa fa-plus-square" aria-hidden="true"></i>@Html.ActionLink("Add a new car", "Create")</a>
+            </div>
+        </p>
+    }
+</div>
+<div class="fh5co-blog-style-1">
+    <div class="container">
+        <div class="row p-b">
+            @foreach (var item in Model.Reverse())
+            {
+                <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+                    <div class="fh5co-post wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.1s">
+                        <div class="fh5co-post-image" style="height:200px;">
+                            <div class="fh5co-category"><a style="font-size:13px; background-color:#010f26;">@Html.DisplayFor(modelItem => item.Make)</a></div>
+                            <a href="/Home/Details/@item.Id"><img src="@Html.DisplayFor(modelItem => item.Picture)" class="img-responsive" style="min-height:200px;"></a>
+                        </div>
+                        <div class="fh5co-post-text">
+                            <h3 style="text-align:center;">@Html.DisplayFor(modelItem => item.Model)</h3>
+                        </div>
+                        <div class="fh5co-post-meta">
+                            <a><i class="fa fa-pencil-square-o"></i><strong>@Html.ActionLink("Edit", "Edit", new { id = item.Id })</strong></a><span style="font-weight:bold; font-size:20px;">|  </span>
+                            <a><i class="fa fa-list"></i><strong>@Html.ActionLink("Details", "Details", new { id = item.Id })</strong></a><span style="font-weight:bold; font-size:20px;">|  </span>
+                            <a><i class="fa fa-trash-o"></i><strong>@Html.ActionLink("Delete", "Delete", new { id = item.Id })</strong></a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
